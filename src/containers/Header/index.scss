@@ -1,0 +1,41 @@
+.header{
+  position: relative;
+
+  &__overly{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 10005;
+
+    transform: scaleY(0);
+    transition: transform .3s ease-in-out;
+    transform-origin: top center;
+    &.active{
+      transform: scaleY(1);
+    }
+  }
+
+  &__card{
+    &.active{
+      background-color: #FFEED5;
+      & > span:first-child{
+        background-color: #fff;
+      }
+    }
+    &:hover{
+      & > span:first-child{
+        background-color: #fff;
+      }
+    }
+  }
+
+  &__link{
+    &:hover{
+      background-color: #29517b22;
+    }
+  }
+
+}
